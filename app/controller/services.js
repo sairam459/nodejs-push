@@ -13,10 +13,19 @@ module.exports = {
         });
         ws.on('message', function(msg) {
             console.log(msg);
+            console.log(clients.length);
             clients.forEach(function(client, i) {
                 if(client.connection!=ws)
                 client.connection.send(msg);
             });
+        });
+        ws.on('close', function(msg) {
+            console.log(msg);
+            
+           clients.splice(clients.indexOf(ws),1);
+           ws.close();
+           console.log(ws);
+           console.log(clients.length);
         });
 
     },
