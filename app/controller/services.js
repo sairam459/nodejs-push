@@ -24,7 +24,7 @@ module.exports = {
             
            clients.splice(clients.indexOf(ws),1);
            ws.close();
-           console.log(ws);
+           
            console.log(clients.length);
         });
 
