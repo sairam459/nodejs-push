@@ -55,18 +55,7 @@ module.exports = {
     },
     camDetails: function(req, res) {
         res.send({
-            "address1": "ss",
-            "address2": "ss",
-            "address3": "ss",
-            "addressQuestion": "N",
-            "businessAddress": "dd",
-            "correspondenceAddress": "dd",
-            "country": "india",
-            "county": "india",
-            "name": "sairam",
-            "postcode": "603103",
-            "town": "vja",
-            "date": "06-09-94"
+            "hello":"world"
         })
     },
 
