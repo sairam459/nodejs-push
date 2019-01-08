@@ -1,9 +1,9 @@
 webPush = require('web-push');
 
 webPush.setVapidDetails(
-    'mailto:hallo@justmarkup.com',
-    "BM57AFDte_mQMHPlncj_w5bsl_sp6JFCp5cP8qF2e6BdMKmAmyrElprAAaF53dP4qvWaiGF3oUJ1U48qRD_5duA", // process.env.VAPID_PUBLIC_KEY,
-    "BhesDzt6VxlybAf2XYtMr0dFsrW0BVT9Qznzqy29TDA" // process.env.VAPID_PRIVATE_KEY
+    '',
+    "", // process.env.VAPID_PUBLIC_KEY,
+    "" // process.env.VAPID_PRIVATE_KEY
 );
 
 
@@ -106,7 +106,7 @@ function pushMessage(subscription, body) {
     webPush.sendNotification(
         subscription,
         JSON.stringify({
-            title: 'CFR',
+            title: 'PUSH',
             body: body,
 
         }),
